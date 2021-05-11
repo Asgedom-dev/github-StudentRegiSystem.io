@@ -1,0 +1,63 @@
+class User {
+  constructor(fname, lname, phone, role, username, password, id, department) {
+    this.fname = fname;
+    this.lname = lname;
+    this.phone = phone;
+    this.role = role;
+    this.username = username;
+    this.password = password;
+    this.id = id;
+    // this.department = department;
+  }
+}
+class Student extends User {
+  constructor(fname, lname, phone, role, username, password, id) {
+    super(fname, lname, phone, role, username, password, id);
+    // this.entryYear = entryYear;
+    // this.gpa=gpa;
+  }
+}
+
+// class Admin extends User{
+//     constructor(fname, lname, phone, role, username, password, id){
+//         super(fname, lname, phone, role, username, password, id)
+//     }
+// }
+// class Course extends User{
+//     constructor(id, name, description, code){
+//         super(id, name, code);
+//         this.description =description;
+//     }
+// }
+// const allStudents = []
+let stud = [new Student("Asgedom","Hailemariam","206-818-1811","student","student", "1", "1")];
+
+// let student2 = new Student("Michael","Alazar","206-818-1811","student","Asgedom","2","02","2020","4");
+// let student3 = new Student("Fekade","Tegeghe","206-818-1811","student","Asgedom","3","03","2020","4");
+// let allStudent = [student1,student2,student3];
+
+// let admin1 = new Admin("Mark","Goytom","206-818-1811","admin","Asgedom","Asgedom","10");
+// let admin2 = new Admin("Sara","Yehedego","206-818-1811","admin","Asgedom","Asgedom","11");
+// let admin3 = new Admin("Petros","Alemseged","206-818-1811","admin","Asgedom","Asgedom","13");
+// let allAdmin = [admin1,admin2,admin3];
+
+// let course1 = new Course("20","Mark","Degree","cs201")
+// let course2 = new Course("21","Mark","Degree","cs301")
+// let course3 = new Course("22","Mark","Degree","cs303")
+// let allCourses = [course1,course2,course3];
+
+// let allArrays = [student1,student2,student3,admin1,admin2,admin3,course1,course2,course3];
+// console.log(stud);
+function login() {
+  let userID = document.getElementById("user").value;
+  let passWord = document.getElementById("password").value;
+
+  for (let i = 0; i < stud.length; i++) {console.log("test");
+    if (stud[i].id === userID && stud[i].password === passWord) {
+      
+      window.location=("student.html");
+      return;
+    }
+  }
+}
+// login(stud); //login(student1);

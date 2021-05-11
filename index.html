@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title> Course registory</title>
     <link rel="stylesheet" type= "text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   </head>
 
   <body>
@@ -14,17 +12,13 @@
         <h1>Login Required</h1>
         <form>
           <p>user Id</p>
-          <input type="text" name="" placeholder=" Enter Id" id="user">
+          <input type="text" name="id" placeholder="Enter Id" id="user">
           <p>password</p>
-          <input type ="password" name="" placeholder="Enter Password" id="password">
-          <input type="submit" name="" value="Login" id="submit">
-          <a href="#">Forgot your password?</a><br>
+          <input type ="password" name="password" placeholder="Enter Password" id="password">
+          <input type="submit"  value="Login" id="submit" onclick="login()">
+          <!-- <a href="#">Forgot your password?</a><br> -->
         </form>
     </div>
- 
-
-
-
-<script src="app.js"></script>
   </body>
+  <script src="app.js"></script>
 </html>
